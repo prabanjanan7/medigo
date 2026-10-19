@@ -1,0 +1,10 @@
+{
+  "name": "MediGO",
+  "short_name": "MediGO",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#f6f8f6",
+  "theme_color": "#168b83",
+  "description": "A private, device-local health record organizer.",
+  "icons": []
+}
