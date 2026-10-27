@@ -1,5 +1,6 @@
 
 import { TRACKERS, today, p, esc, fmtDate, entryName } from "../state.js";
+import { displayValue, unit } from "../utils.js";
 
 export function logView({ tracker, prefill = "", date = today } = {}) {
   const x = p();
@@ -27,7 +28,7 @@ export function logView({ tracker, prefill = "", date = today } = {}) {
       <form id="entry-form" class="form">
         <div class="form-row">
           <label>Tracker
-            <select name="tracker">
+            <select name="tracker" data-tracker-select>
               ${TRACKERS.map(t => `
                 <option value="${esc(t)}"
                   ${t === (prefill || tracker) ? "selected" : ""}>
@@ -37,8 +38,11 @@ export function logView({ tracker, prefill = "", date = today } = {}) {
             </select>
           </label>
           <label>Value
-            <input name="value" required
-              placeholder="Enter a reading or note">
+            <span class="input-with-unit">
+              <input name="value" required
+                placeholder="Enter a reading or note">
+              <small data-entry-unit>${esc(unit(prefill || tracker))}</small>
+            </span>
           </label>
         </div>
 
@@ -65,7 +69,7 @@ export function logView({ tracker, prefill = "", date = today } = {}) {
             <b>${esc(entryName(e.tracker))}</b>
             <small>${fmtDate(e.date)} · ${esc(e.note || "")}</small>
           </span>
-          <strong>${esc(e.value)}</strong>
+          <strong>${esc(displayValue(e.value, e.tracker))}</strong>
         </div>
       `).join("") || '<p class="empty">No entries for this date.</p>'}
     </section>
