@@ -4,6 +4,7 @@ import { displayValue, unit } from "../utils.js";
 
 export function logView({ tracker, prefill = "", date = today } = {}) {
   const x = p();
+  const selectedTracker = prefill || tracker;
   const selectedDate = date <= today ? date : today;
   const entries = x.entries
     .filter(e => e.date === selectedDate)
@@ -37,12 +38,17 @@ export function logView({ tracker, prefill = "", date = today } = {}) {
               `).join("")}
             </select>
           </label>
-          <label>Value
-            <span class="input-with-unit">
-              <input name="value" required
+          <label data-value-label>${selectedTracker === "Mood" ? "Mood" : "Value"}
+            <span class="input-with-unit" data-value-input ${selectedTracker === "Mood" ? "hidden" : ""}>
+              <input name="value" ${selectedTracker === "Mood" ? "hidden" : "required"}
                 placeholder="Enter a reading or note">
               <small data-entry-unit>${esc(unit(prefill || tracker))}</small>
             </span>
+            <select name="mood-value" data-mood-select ${selectedTracker === "Mood" ? "" : "hidden"}>
+              <option value="">Select an emotion</option>
+              ${[["😢", "Sad"], ["😟", "Low"], ["😐", "Okay"], ["🙂", "Good"], ["😄", "Happy"]].map(([emoji, label]) => `<option value="${emoji}">${emoji} ${label}</option>`).join("")}
+            </select>
+            <p class="form-error" data-mood-error hidden>Select an emotion before saving.</p>
           </label>
         </div>
 
