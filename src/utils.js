@@ -2,6 +2,8 @@ import { data, today, TRACKERS, SECTIONS, esc, fmtDate } from "./state.js";
 
 export function age(dob) { const d = new Date(dob); let a = new Date().getFullYear() - d.getFullYear(); if (new Date() < new Date(new Date().getFullYear(), d.getMonth(), d.getDate())) a--; return a; }
 
+export function normalizeIndianMobile(value) { const input = String(value ?? "").trim(); if (!input) return ""; if (!/^[0-9 -]+$/.test(input)) return null; const number = input.replace(/[ -]/g, ""); return /^[6-9]\d{9}$/.test(number) ? number : null; }
+
 export function icon(t) { return ({ Weight: "⚖", "Blood pressure": "♡", "Blood glucose": "◉", Water: "♢", Waist: "⌁", Calories: "✳", Mood: "☺", Symptom: "＋" })[t] || "•"; }
 
 export function unit(t) { if (t === "Weight") return data.settings.weight; if (t === "Blood glucose") return data.settings.glucose; if (t === "Waist") return data.settings.height; if (t === "Water") return "ml"; if (t === "Calories") return "kcal"; return ""; }

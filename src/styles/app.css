@@ -52,6 +52,7 @@ h2{font:700 1.15rem Manrope,sans-serif;margin:0 0 14px}
 .nav-button span{font-size:1.2rem}
 .nav-button.active{background:#e9f5f2;color:var(--teal-dark)}
 .doctor-card,.note-card,.med-card{border:1px solid var(--line);border-radius:14px;padding:17px;margin:12px 0}
+.doctor-card .card-heading .actions{margin-top:0}
 .doctor-card h3,.note-card h3{margin:9px 0 3px;font:700 1rem Manrope}
 .doctor-card p,.note-card p{margin:7px 0}
 .question-form{display:flex;gap:8px;margin:10px 0 18px}
@@ -59,6 +60,7 @@ h2{font:700 1.15rem Manrope,sans-serif;margin:0 0 14px}
 .question-row{display:flex;justify-content:space-between;align-items:center;gap:12px;border-bottom:1px solid var(--line);padding:12px 0}
 .question-row .check{flex:1}
 input,select,textarea{width:100%;min-height:44px;padding:10px 12px;border:1px solid #d8e2df;border-radius:10px;background:white;color:var(--ink)}
+.field-error{color:#a74444;font-size:.8rem;font-weight:600}
 .upload-box{display:flex!important;align-items:center;justify-content:center;min-height:70px;border:1px dashed #a8c7c0;border-radius:12px;background:#f7fbf9;color:var(--teal)!important}
 .small-note{font-size:.8rem}
 .status-label{padding:5px 9px;border-radius:30px;background:#f1f4f3;color:#748486;font-size:.75rem;text-transform:capitalize}
