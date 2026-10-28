@@ -14,7 +14,7 @@ Then open <http://localhost:8000> in a browser. Use **Download backup** in Setti
 
 ## Privacy and limitations
 
-The app does not connect to the hosted MediGO account. Data is stored in the browser profile used for the local site. The report’s QR-style graphic is currently illustrative; the plain-text summary can be copied or shared, but the graphic is not a scannable QR code.
+The app does not connect to the hosted MediGO account. Data is stored in the browser profile used for the local site. Report QR codes are generated locally and encode the selected report as plain text. A QR code has finite capacity; when a report is too large, the QR contains a clearly marked shortened payload while the full report remains available through copy, download, and share.
 
 ## Project structure
 
