@@ -2,7 +2,7 @@ import { data, save, p, today, TRACKERS, SECTIONS, empty, uid, esc, fmtDate, ent
 import { age, icon, unit, daysAgo, sectionLabel, sectionText, summaryText } from "./src/utils.js";
 import { landing } from "./src/pages/landing.js";
 import { welcome, setup } from "./src/pages/onboarding.js";
-import { homeView } from "./src/pages/home.js";
+import { homeView } from "./src/pages/home.js?v=6";
 import { logView } from "./src/pages/tracking.js";
 import { doctorsView } from "./src/pages/care-team.js";
 import { medicationsView } from "./src/pages/medications.js";
