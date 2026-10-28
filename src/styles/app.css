@@ -36,6 +36,9 @@ h2{font:700 1.15rem Manrope,sans-serif;margin:0 0 14px}
 .card-heading{display:flex;align-items:center;justify-content:space-between;gap:12px}
 .card-heading h2,.card-heading h3{margin:0}
 .entry-row{display:flex;align-items:center;gap:10px;padding:13px 0;border-bottom:1px solid #edf0ee}
+.input-with-unit{display:flex;align-items:center;gap:7px}
+.input-with-unit input{min-width:0;flex:1}
+.input-with-unit small{white-space:nowrap;color:var(--muted)}
 .entry-row:last-child{border-bottom:0}
 .entry-row>span:first-child{display:grid;gap:4px;flex:1}
 .entry-row small{font-size:.77rem}
@@ -61,6 +64,10 @@ h2{font:700 1.15rem Manrope,sans-serif;margin:0 0 14px}
 input,select,textarea{width:100%;min-height:44px;padding:10px 12px;border:1px solid #d8e2df;border-radius:10px;background:white;color:var(--ink)}
 .upload-box{display:flex!important;align-items:center;justify-content:center;min-height:70px;border:1px dashed #a8c7c0;border-radius:12px;background:#f7fbf9;color:var(--teal)!important}
 .small-note{font-size:.8rem}
+.form-error{margin:0;color:#a74444;font-size:.82rem;font-weight:600}
+.phone-row{display:flex;gap:7px}
+.phone-row input{flex:1;min-width:0}
+.phone-country{width:142px;flex:none}
 .status-label{padding:5px 9px;border-radius:30px;background:#f1f4f3;color:#748486;font-size:.75rem;text-transform:capitalize}
 .status-label.taken{background:#e2f4ea;color:#287248}
 .status-label.skipped{background:#fff3df;color:#976a22}
