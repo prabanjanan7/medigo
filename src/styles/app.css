@@ -4,7 +4,7 @@ a{color:inherit;text-decoration:none}
 .stats>div{padding:11px;border:1px solid #edf1ef;border-radius:12px;display:grid;gap:4px}
 .stats small,.stats span{font-size:.65rem;color:var(--muted)}
 .stats b{font:700 1.08rem Manrope}
-.qr-placeholder{width:45px;height:45px;display:grid;place-items:center;background:#f3f7f5;border-radius:8px;color:#245b56;font-size:2.2rem}
+
 .section{padding-top:95px;padding-bottom:95px}
 .section-intro{max-width:570px;color:var(--muted);margin-bottom:35px}
 .feature-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
@@ -90,9 +90,7 @@ th{color:var(--muted);font-size:.8rem}
 .qr-summary{display:flex;align-items:center;gap:14px;margin:12px 0 17px;padding:14px;background:#f6f9f7;border-radius:13px}
 .qr-summary>div:nth-child(2){display:grid;gap:5px}
 .qr-summary small{font-size:.8rem}
-.qr-grid{width:72px;height:72px;display:grid;grid-template-columns:repeat(9,1fr);gap:1px;padding:4px;background:white}
-.qr-grid i{background:white}
-.qr-grid i.dark{background:#244b46}
+.qr-code{width:132px;height:132px;flex:0 0 132px;display:grid;place-items:center;background:#fff;border:1px solid var(--line);border-radius:10px;padding:5px}.qr-code svg{display:block;width:100%;height:100%;shape-rendering:crispEdges}.qr-limit{margin-top:-6px}
 .emergency-card{padding:18px;background:#f8faf9;border:1px solid var(--line);border-radius:13px}
 .emergency-card p{margin:7px 0}
 .report-preview{background:#e9eeec;padding:22px;border-radius:15px}
