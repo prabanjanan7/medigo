@@ -18,6 +18,8 @@ The app does not connect to the hosted MediGO account. Data is stored in the bro
 
 Voice logging is optional and uses the browser's native speech-recognition support. It may require microphone permission and a browser-provided speech service; spoken text is reviewed in the existing form and is never saved until you choose **Save entry**. MediGO does not store raw audio.
 
+Profile management is available from the profile switcher and Settings. The home screen summarizes water entries for today, offers 250 ml quick-add controls, and flags totals above the profile's daily goal (2,000 ml by default).
+
 ## Project structure
 
 - `app.js` owns app startup, navigation, and shared event handling.
