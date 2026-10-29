@@ -1,4 +1,4 @@
-const CACHE = "medigo-shell-v9";
+const CACHE = "medigo-shell-v10";
 const ASSETS = ["./", "./index.html", "./styles.css", "./app.js", "./manifest.webmanifest", "./src/state.js", "./src/utils.js", "./src/qrcode-generator.js", "./src/services/voiceParser.js", "./src/services/speechCapture.js", "./src/pages/landing.js", "./src/pages/onboarding.js", "./src/pages/home.js", "./src/pages/reminders.js", "./src/pages/tracking.js", "./src/pages/care-team.js", "./src/pages/medications.js", "./src/pages/analytics.js", "./src/pages/report.js", "./src/pages/settings.js", "./src/pages/profiles.js", "./src/styles/foundation.css", "./src/styles/landing.css", "./src/styles/app.css"];
 
 self.addEventListener("install", event => {
