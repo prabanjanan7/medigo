@@ -61,6 +61,11 @@ h2{font:700 1.15rem Manrope,sans-serif;margin:0 0 14px}
 .doctor-card p,.note-card p{margin:7px 0}
 .question-form{display:flex;gap:8px;margin:10px 0 18px}
 .question-form input{flex:1}
+.question-form select,.question-date{flex:1}
+.question-date{display:grid;gap:5px}
+.question-row small{display:block;color:var(--muted);font-size:.75rem;margin-top:3px}
+.visit-reminder{display:grid;gap:5px;margin-bottom:14px;padding:12px;border:1px solid #f1c979;border-radius:12px;background:#fff8e6}
+.visit-reminder ul{margin:4px 0 0 18px;padding:0}
 .question-row{display:flex;justify-content:space-between;align-items:center;gap:12px;border-bottom:1px solid var(--line);padding:12px 0}
 .question-row .check{flex:1}
 input,select,textarea{width:100%;min-height:44px;padding:10px 12px;border:1px solid #d8e2df;border-radius:10px;background:white;color:var(--ink)}

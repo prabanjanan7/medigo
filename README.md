@@ -16,6 +16,8 @@ Then open <http://localhost:8000> in a browser. Use **Download backup** in Setti
 
 The app does not connect to the hosted MediGO account. Data is stored in the browser profile used for the local site. Report QR codes are generated locally and encode the selected report as plain text. A QR code has finite capacity; when a report is too large, the QR contains a clearly marked shortened payload while the full report remains available through copy, download, and share.
 
+Voice logging is optional and uses the browser's native speech-recognition support. It may require microphone permission and a browser-provided speech service; spoken text is reviewed in the existing form and is never saved until you choose **Save entry**. MediGO does not store raw audio.
+
 ## Project structure
 
 - `app.js` owns app startup, navigation, and shared event handling.

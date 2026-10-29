@@ -1,5 +1,5 @@
-const CACHE = "medigo-shell-v4";
-const ASSETS = ["./", "./index.html", "./styles.css", "./app.js", "./manifest.webmanifest", "./src/state.js", "./src/utils.js", "./src/qrcode-generator.js", "./src/pages/landing.js", "./src/pages/onboarding.js", "./src/pages/home.js", "./src/pages/tracking.js", "./src/pages/care-team.js", "./src/pages/medications.js", "./src/pages/analytics.js", "./src/pages/report.js", "./src/pages/settings.js", "./src/styles/foundation.css", "./src/styles/landing.css", "./src/styles/app.css"];
+const CACHE = "medigo-shell-v6";
+const ASSETS = ["./", "./index.html", "./styles.css", "./app.js", "./manifest.webmanifest", "./src/state.js", "./src/utils.js", "./src/qrcode-generator.js", "./src/services/voiceParser.js", "./src/services/speechCapture.js", "./src/pages/landing.js", "./src/pages/onboarding.js", "./src/pages/home.js", "./src/pages/tracking.js", "./src/pages/care-team.js", "./src/pages/medications.js", "./src/pages/analytics.js", "./src/pages/report.js", "./src/pages/settings.js", "./src/styles/foundation.css", "./src/styles/landing.css", "./src/styles/app.css"];
 
 self.addEventListener("install", event => {
   event.waitUntil(caches.open(CACHE).then(cache => cache.addAll(ASSETS)));
