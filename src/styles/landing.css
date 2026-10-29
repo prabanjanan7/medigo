@@ -50,3 +50,17 @@
 .site-footer{min-height:92px;display:flex;align-items:center;justify-content:space-between;gap:20px;color:var(--muted);font-size:.82rem}
 .site-footer .wordmark{font-size:1rem}
 .site-footer .logo-mark{width:27px;height:27px;font-size:.8rem;border-radius:9px}
+.browser-recommendation{display:flex;align-items:flex-start;gap:11px;max-width:540px;margin-top:16px;padding:13px 15px;border:1px solid #cce6dd;border-radius:14px;background:#f1faf6;color:var(--teal-dark)}
+.browser-recommendation>span{display:grid;place-items:center;flex:0 0 24px;width:24px;height:24px;border-radius:50%;background:#d8f0e7;font-weight:800}
+.browser-recommendation div{display:grid;gap:3px}
+.browser-recommendation b{font-size:.85rem}
+.browser-recommendation small{font-size:.77rem;line-height:1.45;color:#5f7774}
+.browser-feature-section{padding-top:68px;padding-bottom:72px}
+.browser-feature-heading{max-width:660px;margin:0 auto 26px;text-align:center}
+.browser-feature-heading h2{font:800 clamp(1.8rem,3.5vw,2.7rem)/1.1 Manrope,sans-serif;letter-spacing:-.04em;margin:12px 0}
+.browser-feature-heading p{margin:0;color:var(--muted)}
+.browser-feature-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.browser-feature-grid article{display:flex;align-items:flex-start;gap:13px;padding:20px;border:1px solid #e2ece8;border-radius:17px;background:linear-gradient(145deg,#fff,#f9fcfa);box-shadow:0 6px 18px rgba(27,65,60,.04)}
+.browser-feature-grid article>span{display:grid;place-items:center;flex:0 0 40px;width:40px;height:40px;border-radius:13px;background:#e6f4ef;color:var(--teal);font-size:1.15rem}
+.browser-feature-grid h3{font:700 1rem Manrope,sans-serif;margin:1px 0 7px}
+.browser-feature-grid p{margin:0;color:var(--muted);font-size:.84rem;line-height:1.55}
