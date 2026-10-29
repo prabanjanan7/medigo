@@ -148,3 +148,128 @@ th{color:var(--muted);font-size:.8rem}
 .profile-actions .button{padding:8px 13px;min-height:40px}
 .profile-confirm{font-size:.82rem;color:#a74444;font-weight:600}
 @media(max-width:540px){.profile-card{flex-wrap:wrap}.profile-actions{width:100%;justify-content:flex-start}}
+
+/* Home dashboard */
+.dashboard-heading{display:flex;align-items:center;justify-content:space-between;gap:16px;margin:4px 0 22px}
+.dashboard-heading h1{font:800 clamp(1.65rem,3vw,2.25rem) Manrope,sans-serif;letter-spacing:-.04em;margin:3px 0}
+.dashboard-heading p{margin:0;color:var(--muted)}
+.dashboard-date{font-size:.83rem}
+.notification-button{position:relative;display:grid;place-items:center;width:48px;height:48px;border:1px solid var(--line);border-radius:15px;background:#fff;color:var(--teal-dark);font-size:1.35rem}
+.notification-button b{position:absolute;right:-5px;top:-6px;display:grid;place-items:center;min-width:20px;height:20px;padding:0 5px;border-radius:50px;background:#d95f50;color:#fff;font-size:.68rem}
+.dashboard-metrics{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:13px;margin:0 0 16px}
+.metric-card{position:relative;display:flex;flex-direction:column;gap:7px;min-width:0;min-height:218px;padding:16px;border:1px solid var(--line);border-radius:17px;background:#fff;box-shadow:0 4px 15px rgba(33,58,56,.035)}
+.metric-head{display:flex;align-items:center;gap:9px;font-weight:700;font-size:.9rem}
+.metric-head .icon-button{margin-left:auto;border-radius:50%;width:30px;height:30px;min-height:30px}
+.metric-icon{display:grid;place-items:center;width:38px;height:38px;border-radius:50%;background:#e5f5ef;color:#188575;font-size:1.25rem}
+.metric-weight .metric-icon{background:#e2f5ee;color:#168b83}
+.metric-pressure .metric-icon{background:#fff0ef;color:#cf6872}
+.metric-glucose .metric-icon{background:#f3edff;color:#8863c2}
+.metric-water .metric-icon{background:#e9f5ff;color:#3a89c4}
+.metric-value{display:block;overflow-wrap:anywhere;font:800 1.35rem Manrope,sans-serif;letter-spacing:-.025em}
+.metric-value small{font:600 .86rem 'DM Sans',sans-serif;letter-spacing:0}
+.metric-card>small{font-size:.75rem}
+.metric-sparkline{width:100%;height:33px;margin-top:auto;overflow:visible}
+.metric-sparkline polyline{fill:none;stroke:#55b7a6;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
+.metric-pressure .metric-sparkline polyline{stroke:#e69ca3}
+.metric-glucose .metric-sparkline polyline{stroke:#a88bd6}
+.empty-sparkline{height:33px;background:linear-gradient(180deg,transparent 0 55%,#edf6f3 100%);border-radius:8px}
+.metric-log{align-self:flex-start;min-height:35px;padding:7px 10px;font-size:.77rem}
+.metric-menu{margin-left:auto;color:var(--muted)}
+.water-progress{height:10px;overflow:hidden;border-radius:99px;background:#e8eef2}
+.water-progress span{display:block;height:100%;border-radius:inherit;background:linear-gradient(90deg,#54b7dd,#178caa);transition:width .25s ease}
+.water-quick-actions{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:5px;margin-top:auto}
+.water-quick-actions .button{min-height:35px;padding:5px 3px;font-size:.7rem}
+.dashboard-columns{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:16px;align-items:start}
+.dashboard-column{min-width:0}
+.dashboard-column>.card{margin:0 0 16px}
+.progress-card .card-heading{margin-bottom:16px}
+.progress-card .card-heading h2{margin:0}
+.progress-content{display:flex;align-items:center;gap:20px}
+.progress-ring{flex:0 0 132px;width:132px;height:132px;display:grid;place-items:center;border-radius:50%;background:conic-gradient(var(--teal) var(--progress),#e8edef 0);position:relative}
+.progress-ring:before{content:"";position:absolute;inset:11px;border-radius:50%;background:#fff}
+.progress-ring>div{position:relative;display:grid;justify-items:center;gap:3px}
+.progress-ring b{font:800 1.65rem Manrope;color:var(--ink)}
+.progress-ring small{font-size:.76rem}
+.progress-copy{min-width:0}
+.progress-copy>b{font:700 1rem Manrope}
+.progress-copy p{margin:6px 0 12px;font-size:.85rem;color:var(--muted);line-height:1.45}
+.progress-copy .button{min-height:38px;padding:8px 12px;font-size:.82rem}
+.checklist-card .card-heading{margin-bottom:9px}
+.checklist-card .card-heading h2{margin:0}
+.checklist-card .card-heading small{white-space:nowrap}
+.checklist-card .checklist-grid{grid-template-columns:1fr;gap:0}
+.checklist-card .checklist-item{padding:8px 2px;border:0;border-bottom:1px solid #edf1ef;border-radius:0}
+.checklist-card .checklist-item:last-child{border-bottom:0}
+.checklist-card .tracker-icon{width:32px;height:32px;font-size:1rem}
+.checklist-card .checklist-item .button{min-width:70px;min-height:34px;padding:5px 9px;font-size:.76rem}
+.checklist-card .is-complete .tracker-icon{background:#e2f5ee}
+.add-question-card .card-heading{align-items:flex-start;margin-bottom:12px}
+.add-question-card .card-heading h2{margin:0 0 3px}
+.add-question-card .card-heading p{margin:0;font-size:.8rem;color:var(--muted)}
+.question-mark{display:grid;place-items:center;flex:0 0 38px;height:38px;border-radius:12px;background:#e8f5f1;color:var(--teal-dark);font-weight:800}
+.home-question-form{display:grid;gap:11px}
+.home-question-form label{display:grid;gap:6px;font-size:.8rem;font-weight:600;color:#53686b}
+.home-question-form .form-row{grid-template-columns:1fr 1fr}
+.home-question-form input,.home-question-form select{font-size:.84rem}
+.home-question-form>.button{justify-self:start;min-height:38px;padding:8px 12px;font-size:.82rem}
+.saved-questions{margin-top:18px}
+.saved-questions h3{font:700 .88rem Manrope;margin:0 0 6px}
+.saved-question{margin:0;padding:10px 0;border-top:1px solid #edf1ef;font-size:.88rem;line-height:1.5}
+.saved-question small{display:block;margin-top:3px;font-size:.72rem}
+.recent-card .card-heading{margin-bottom:6px}
+.recent-card .card-heading h2{margin:0}
+.recent-card .entry-row{gap:7px;padding:9px 0}
+.recent-card .entry-row>strong{font-size:.82rem}
+.recent-card .icon-button{width:30px;height:30px;min-height:30px}
+.insight-card{background:linear-gradient(135deg,#f0faf6,#e9f6f5)}
+.insight-card h2{margin:0 0 8px}
+.insight-card p{margin:0 0 6px;font-size:.88rem}
+.insight-card small{display:block;font-size:.7rem}
+.notification-panel{border-color:#cde7df;background:#fcfffd}
+.notification-panel h2{margin:0}
+.notification-panel h3{font:700 .88rem Manrope;margin:17px 0 7px}
+.reminder-list{list-style:none;margin:0;padding:0}
+.reminder-list li{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:8px 0;border-bottom:1px solid #edf1ef}
+.reminder-list li:last-child{border-bottom:0}
+.appointment-reminder{display:grid;gap:4px;padding:10px 0;border-top:1px solid #edf1ef}
+.appointment-reminder blockquote{margin:4px 0 0;padding:8px 10px;border-left:3px solid #73bca9;background:#f0f8f5;border-radius:0 8px 8px 0;font-size:.84rem;line-height:1.5}
+.notification-panel .empty{margin:0;padding:4px 0;font-size:.83rem}
+.visit-reminder{background:#fff8e6}
+.app-content>.page-title:not(.dashboard-heading){padding:20px 23px;margin:0 0 18px;border:1px solid #dfece7;border-radius:20px;background:linear-gradient(120deg,#eff8f4,#f5f8fa);box-shadow:0 5px 18px rgba(27,65,60,.035)}
+.app-content>.page-title:not(.dashboard-heading) h1{font-size:clamp(1.5rem,2.7vw,2rem)}
+.app-content>.page-title:not(.dashboard-heading) p{font-size:.88rem}
+.app-content>.card{border-radius:19px;box-shadow:0 6px 22px rgba(27,65,60,.045)}
+.app-content .tabs{padding:5px;border-radius:15px;background:#edf4f1}
+.app-content .tabs .tab{border-radius:11px}
+.app-content .tabs .tab.active{background:#fff;box-shadow:0 2px 8px rgba(27,65,60,.08)}
+.app-content .doctor-card,.app-content .note-card,.app-content .med-card{border-radius:17px;background:linear-gradient(145deg,#fff,#fbfdfc)}
+.app-content .card-heading{margin-bottom:12px}
+.app-content .empty-state{border:1px dashed #d7e7e1;border-radius:17px;background:#fbfdfc}
+.app-content .entry-row{transition:background .16s ease}
+.app-content .entry-row:hover{background:#f8fbf9}
+.reminders-title{align-items:flex-start}
+.reminder-section .card-heading{margin-bottom:12px}
+.reminder-section .card-heading h2{margin:0 0 3px}
+.reminder-section .card-heading p{margin:0;font-size:.8rem}
+.reminder-count{display:grid;place-items:center;min-width:34px;height:34px;padding:0 9px;border-radius:20px;background:#e5f4ef;color:var(--teal-dark);font-weight:800}
+.reminder-items{display:grid;gap:5px}
+.reminder-item{display:flex;align-items:center;gap:12px;padding:12px 0;border-bottom:1px solid #edf1ef}
+.reminder-item:last-child{border-bottom:0}
+.reminder-item>span:nth-child(2){display:grid;gap:3px;flex:1;min-width:0}
+.reminder-item>span:nth-child(2) small{font-size:.76rem}
+.reminder-item .button{min-height:36px;padding:7px 12px;font-size:.8rem}
+.visit-reminder-page{display:flex;align-items:flex-start;gap:14px;padding:16px 0;border-bottom:1px solid #edf1ef}
+.visit-reminder-page:last-child{border-bottom:0}
+.visit-date-badge{display:grid;place-items:center;align-content:center;flex:0 0 54px;height:60px;border-radius:14px;background:#fff4dc;color:#8a6326}
+.visit-date-badge b{font:800 1.3rem Manrope}
+.visit-date-badge small{text-transform:uppercase;font-size:.65rem;font-weight:800;letter-spacing:.08em;color:inherit}
+.visit-reminder-content{flex:1;min-width:0}
+.visit-reminder-content h3{margin:0 0 3px;font:700 1rem Manrope}
+.visit-reminder-content .card-heading{align-items:center;margin:0}
+.visit-reminder-content h4{margin:12px 0 5px;font-size:.84rem}
+.visit-reminder-content ul{margin:0;padding-left:20px}
+.visit-reminder-content li{padding:4px 0;line-height:1.5}
+.visit-reminder-content>p{margin:8px 0 0;font-size:.82rem}
+@media(max-width:900px){.dashboard-metrics{grid-template-columns:repeat(2,minmax(0,1fr))}.dashboard-columns{grid-template-columns:1fr 1fr}}
+@media(max-width:650px){.dashboard-columns{grid-template-columns:1fr}.dashboard-metrics{gap:9px}.metric-card{min-height:200px;padding:13px}.metric-head{font-size:.83rem}.metric-icon{width:34px;height:34px}.progress-ring{flex-basis:112px;width:112px;height:112px}.progress-content{gap:14px}.home-question-form .form-row{grid-template-columns:1fr}.dashboard-heading h1{font-size:1.55rem}.app-content>.page-title:not(.dashboard-heading){align-items:flex-start;padding:17px}.reminders-title{flex-direction:column}.reminders-title>.button{align-self:flex-start}.visit-reminder-page{gap:10px}.visit-reminder-content .card-heading>.text-button{padding:5px;font-size:.75rem}}
+@media(max-width:390px){.dashboard-metrics{grid-template-columns:1fr}.metric-card{min-height:170px}.metric-sparkline,.empty-sparkline{height:25px}.water-quick-actions{gap:4px}}

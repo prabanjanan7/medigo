@@ -1,6 +1,7 @@
 /* MediGO — private, local-first health record and report builder. */
 export const KEY = "medigo-data-v1";
-export const today = new Date().toISOString().slice(0, 10);
+const localNow = new Date();
+export const today = `${localNow.getFullYear()}-${String(localNow.getMonth() + 1).padStart(2, "0")}-${String(localNow.getDate()).padStart(2, "0")}`;
 export const TRACKERS = ["Weight", "Blood pressure", "Blood glucose", "Water", "Waist", "Calories", "Mood", "Symptom"];
 export const SECTIONS = [["profile", "Profile & emergency info", "Name, age, blood group, allergies, contacts"], ["conditions", "Conditions", "The health categories you track"], ["medications", "Current medications & adherence", "Dose, schedule, taken/missed/skipped"], ["vitals", "Vitals per condition", "Summary stats and trend chart per vital"], ["bmi", "BMI & weight", "Latest weight, BMI and trend"], ["mood", "Mood summary", "Average mood and low-mood days"], ["symptoms", "Symptoms & notes", "Free-text entries"], ["questions", "Questions for doctor", "Only the questions you checked"], ["notes", "Visit notes", "Advice from previous visits"], ["documents", "Attached documents", "Images inline, PDFs listed"]];
 export const empty = () => ({ disclaimerAccepted: false, settings: { largeText: false, highContrast: false, weight: "kg", height: "cm", glucose: "mg/dL", asianBmi: true }, profiles: [], activeProfileId: null });

@@ -59,6 +59,7 @@ export function logView({ tracker, prefill = "", date = today } = {}) {
 
         <div class="actions">
           <button type="submit" class="button">Save entry</button>
+          <p class="form-error" data-entry-warning role="alert" aria-live="assertive" hidden></p>
           <button type="button" class="button secondary" data-action="voice-start">Log with voice</button>
         </div>
         <p class="voice-status" data-voice-status aria-live="polite"></p>
